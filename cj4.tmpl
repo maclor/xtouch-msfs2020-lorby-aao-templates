@@ -139,39 +139,6 @@
       <GlobalHotkey>
         <downEvent>
           <Group>Autopilot</Group>
-          <Description>Toggles heading hold mode</Description>
-          <SimulatorEventName>AP_HDG_HOLD</SimulatorEventName>
-          <MinValue>0</MinValue>
-          <MaxValue>0</MaxValue>
-          <ValueToSet>1</ValueToSet>
-          <IsAaoVirtualEvent>false</IsAaoVirtualEvent>
-          <type>SINGLE</type>
-        </downEvent>
-        <modifier>0</modifier>
-        <key>0</key>
-        <repeat>16384</repeat>
-        <repeatFrequency>1</repeatFrequency>
-        <id>0</id>
-        <joystickGuid>00000000-0000-0000-0000-000000000000</joystickGuid>
-        <joystickName />
-        <joystickButton>-1</joystickButton>
-        <joystickPovControl>-1</joystickPovControl>
-        <joystickPovDirection>-1</joystickPovDirection>
-        <midiDeviceId>1</midiDeviceId>
-        <midiChannel>10</midiChannel>
-        <midiEvent>12</midiEvent>
-        <endless>false</endless>
-        <midiEncoder>CLICK</midiEncoder>
-        <isSimKey>false</isSimKey>
-        <comboSuppressesEvent>false</comboSuppressesEvent>
-        <comboIsToggle>false</comboIsToggle>
-        <virtualModifiers />
-        <virtualKeys />
-        <Action>AP_HDG_HOLD</Action>
-      </GlobalHotkey>
-      <GlobalHotkey>
-        <downEvent>
-          <Group>Autopilot</Group>
           <Description>Toggles approach hold (localizer and glide-slope)</Description>
           <SimulatorEventName>AP_APR_HOLD</SimulatorEventName>
           <MinValue>0</MinValue>
@@ -235,42 +202,174 @@
         <virtualKeys />
         <Action>AP_NAV1_HOLD</Action>
       </GlobalHotkey>
+      <GlobalHotkey>
+        <downEvent>
+          <Group>Scripts</Group>
+          <Description>RPN</Description>
+          <SimulatorEventName>Scripts-HDG_inc</SimulatorEventName>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+          <ValueToSet>1</ValueToSet>
+          <IsAaoVirtualEvent>false</IsAaoVirtualEvent>
+          <type>SCRIPT</type>
+        </downEvent>
+        <modifier>0</modifier>
+        <key>0</key>
+        <repeat>16384</repeat>
+        <repeatFrequency>1</repeatFrequency>
+        <id>0</id>
+        <joystickGuid>00000000-0000-0000-0000-000000000000</joystickGuid>
+        <joystickName />
+        <joystickButton>-1</joystickButton>
+        <joystickPovControl>-1</joystickPovControl>
+        <joystickPovDirection>-1</joystickPovDirection>
+        <midiDeviceId>1</midiDeviceId>
+        <midiChannel>5</midiChannel>
+        <midiEvent>0</midiEvent>
+        <endless>false</endless>
+        <midiEncoder>TURN_RIGHT</midiEncoder>
+        <isSimKey>false</isSimKey>
+        <comboSuppressesEvent>false</comboSuppressesEvent>
+        <comboIsToggle>false</comboIsToggle>
+        <virtualModifiers />
+        <virtualKeys />
+        <Action>Scripts-HDG_inc</Action>
+      </GlobalHotkey>
+      <GlobalHotkey>
+        <downEvent>
+          <Group>Scripts</Group>
+          <Description>RPN</Description>
+          <SimulatorEventName>Scripts-HDG_dec</SimulatorEventName>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+          <ValueToSet>1</ValueToSet>
+          <IsAaoVirtualEvent>false</IsAaoVirtualEvent>
+          <type>SCRIPT</type>
+        </downEvent>
+        <modifier>0</modifier>
+        <key>0</key>
+        <repeat>16384</repeat>
+        <repeatFrequency>1</repeatFrequency>
+        <id>0</id>
+        <joystickGuid>00000000-0000-0000-0000-000000000000</joystickGuid>
+        <joystickName />
+        <joystickButton>-1</joystickButton>
+        <joystickPovControl>-1</joystickPovControl>
+        <joystickPovDirection>-1</joystickPovDirection>
+        <midiDeviceId>1</midiDeviceId>
+        <midiChannel>5</midiChannel>
+        <midiEvent>0</midiEvent>
+        <endless>false</endless>
+        <midiEncoder>TURN_LEFT</midiEncoder>
+        <isSimKey>false</isSimKey>
+        <comboSuppressesEvent>false</comboSuppressesEvent>
+        <comboIsToggle>false</comboIsToggle>
+        <virtualModifiers />
+        <virtualKeys />
+        <Action>Scripts-HDG_dec</Action>
+      </GlobalHotkey>
+      <GlobalHotkey>
+        <downEvent>
+          <Group>Scripts</Group>
+          <Description>RPN</Description>
+          <SimulatorEventName>Scripts-HDG_SYNC</SimulatorEventName>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+          <ValueToSet>1</ValueToSet>
+          <IsAaoVirtualEvent>false</IsAaoVirtualEvent>
+          <type>SCRIPT</type>
+        </downEvent>
+        <modifier>0</modifier>
+        <key>0</key>
+        <repeat>16384</repeat>
+        <repeatFrequency>1</repeatFrequency>
+        <id>0</id>
+        <joystickGuid>00000000-0000-0000-0000-000000000000</joystickGuid>
+        <joystickName />
+        <joystickButton>-1</joystickButton>
+        <joystickPovControl>-1</joystickPovControl>
+        <joystickPovDirection>-1</joystickPovDirection>
+        <midiDeviceId>1</midiDeviceId>
+        <midiChannel>10</midiChannel>
+        <midiEvent>4</midiEvent>
+        <endless>false</endless>
+        <midiEncoder>CLICK</midiEncoder>
+        <isSimKey>false</isSimKey>
+        <comboSuppressesEvent>false</comboSuppressesEvent>
+        <comboIsToggle>false</comboIsToggle>
+        <virtualModifiers />
+        <virtualKeys />
+        <Action>Scripts-HDG_SYNC</Action>
+      </GlobalHotkey>
+      <GlobalHotkey>
+        <downEvent>
+          <Group>Scripts</Group>
+          <Description>RPN</Description>
+          <SimulatorEventName>Scripts-HDG_mode_toggle</SimulatorEventName>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+          <ValueToSet>1</ValueToSet>
+          <IsAaoVirtualEvent>false</IsAaoVirtualEvent>
+          <type>SCRIPT</type>
+        </downEvent>
+        <modifier>0</modifier>
+        <key>0</key>
+        <repeat>16384</repeat>
+        <repeatFrequency>1</repeatFrequency>
+        <id>0</id>
+        <joystickGuid>00000000-0000-0000-0000-000000000000</joystickGuid>
+        <joystickName />
+        <joystickButton>-1</joystickButton>
+        <joystickPovControl>-1</joystickPovControl>
+        <joystickPovDirection>-1</joystickPovDirection>
+        <midiDeviceId>1</midiDeviceId>
+        <midiChannel>10</midiChannel>
+        <midiEvent>12</midiEvent>
+        <endless>false</endless>
+        <midiEncoder>CLICK</midiEncoder>
+        <isSimKey>false</isSimKey>
+        <comboSuppressesEvent>false</comboSuppressesEvent>
+        <comboIsToggle>false</comboIsToggle>
+        <virtualModifiers />
+        <virtualKeys />
+        <Action>Scripts-HDG_mode_toggle</Action>
+      </GlobalHotkey>
     </buttons>
     <axis />
     <overrideSaitekEvents />
     <autoScripts>
       <AutoScript>
-        <scriptId>ALT_info</scriptId>
+        <scriptId>Scripts-ALT_info</scriptId>
         <delayMilliseconds>300</delayMilliseconds>
         <type>LOOP</type>
       </AutoScript>
       <AutoScript>
-        <scriptId>APP_info</scriptId>
+        <scriptId>Scripts-APP_info</scriptId>
         <delayMilliseconds>300</delayMilliseconds>
         <type>LOOP</type>
       </AutoScript>
       <AutoScript>
-        <scriptId>FD_info</scriptId>
+        <scriptId>Scripts-FD_info</scriptId>
         <delayMilliseconds>300</delayMilliseconds>
         <type>LOOP</type>
       </AutoScript>
       <AutoScript>
-        <scriptId>HDG_info</scriptId>
+        <scriptId>Scripts-HDG_info</scriptId>
         <delayMilliseconds>300</delayMilliseconds>
         <type>LOOP</type>
       </AutoScript>
       <AutoScript>
-        <scriptId>NAV_info</scriptId>
+        <scriptId>Scripts-NAV_info</scriptId>
         <delayMilliseconds>300</delayMilliseconds>
         <type>LOOP</type>
       </AutoScript>
       <AutoScript>
-        <scriptId>VS_info</scriptId>
+        <scriptId>Scripts-VS_info</scriptId>
         <delayMilliseconds>300</delayMilliseconds>
         <type>LOOP</type>
       </AutoScript>
       <AutoScript>
-        <scriptId>YD_info</scriptId>
+        <scriptId>Scripts-YD_info</scriptId>
         <delayMilliseconds>300</delayMilliseconds>
         <type>LOOP</type>
       </AutoScript>
@@ -280,6 +379,26 @@
     <webGaugesTemplateGuid>00000000-0000-0000-0000-000000000000</webGaugesTemplateGuid>
   </template>
   <scripts>
+    <Script>
+      <group>Scripts</group>
+      <label>HDG_inc</label>
+      <script>(A:AUTOPILOT HEADING LOCK DIR, Degrees) (&gt;K:HEADING_BUG_SET) 1 (&gt;K:HEADING_BUG_INC)</script>
+    </Script>
+    <Script>
+      <group>Scripts</group>
+      <label>HDG_dec</label>
+      <script>(A:AUTOPILOT HEADING LOCK DIR, Degrees) (&gt;K:HEADING_BUG_SET) 1 (&gt;K:HEADING_BUG_DEC)</script>
+    </Script>
+    <Script>
+      <group>Scripts</group>
+      <label>HDG_SYNC</label>
+      <script>(A:PLANE HEADING DEGREES GYRO, Degrees) (&gt;K:HEADING_BUG_SET)</script>
+    </Script>
+    <Script>
+      <group>Scripts</group>
+      <label>HDG_mode_toggle</label>
+      <script>(A:AUTOPILOT HEADING LOCK DIR, Degrees) (&gt;K:HEADING_BUG_SET) (A:AUTOPILOT HEADING LOCK, Bool) 0 == if{ 1 (&gt;K:AP_HDG_HOLD_ON) } els{ 1 (&gt;K:AP_HDG_HOLD_OFF) }</script>
+    </Script>
     <Script>
       <group>Scripts</group>
       <label>ALT_info</label>
