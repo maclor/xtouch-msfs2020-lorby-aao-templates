@@ -686,6 +686,39 @@
         <virtualKeys />
         <Action>KOHLSMAN_DEC</Action>
       </GlobalHotkey>
+      <GlobalHotkey>
+        <downEvent>
+          <Group>Scripts</Group>
+          <Description>RPN</Description>
+          <SimulatorEventName>Scripts-FLC_toggle</SimulatorEventName>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+          <ValueToSet>1</ValueToSet>
+          <IsAaoVirtualEvent>false</IsAaoVirtualEvent>
+          <type>SCRIPT</type>
+        </downEvent>
+        <modifier>0</modifier>
+        <key>0</key>
+        <repeat>16384</repeat>
+        <repeatFrequency>1</repeatFrequency>
+        <id>0</id>
+        <joystickGuid>00000000-0000-0000-0000-000000000000</joystickGuid>
+        <joystickName />
+        <joystickButton>-1</joystickButton>
+        <joystickPovControl>-1</joystickPovControl>
+        <joystickPovDirection>-1</joystickPovDirection>
+        <midiDeviceId>1</midiDeviceId>
+        <midiChannel>10</midiChannel>
+        <midiEvent>18</midiEvent>
+        <endless>false</endless>
+        <midiEncoder>CLICK</midiEncoder>
+        <isSimKey>false</isSimKey>
+        <comboSuppressesEvent>false</comboSuppressesEvent>
+        <comboIsToggle>false</comboIsToggle>
+        <virtualModifiers />
+        <virtualKeys />
+        <Action>Scripts-FLC_toggle</Action>
+      </GlobalHotkey>
     </buttons>
     <axis />
     <overrideSaitekEvents />
@@ -702,6 +735,11 @@
       </AutoScript>
       <AutoScript>
         <scriptId>Scripts-FD_info</scriptId>
+        <delayMilliseconds>300</delayMilliseconds>
+        <type>LOOP</type>
+      </AutoScript>
+      <AutoScript>
+        <scriptId>Scripts-FLC_info</scriptId>
         <delayMilliseconds>300</delayMilliseconds>
         <type>LOOP</type>
       </AutoScript>
@@ -763,6 +801,11 @@
     </Script>
     <Script>
       <group>Scripts</group>
+      <label>FLC_toggle</label>
+      <script>(A:AUTOPILOT FLIGHT LEVEL CHANGE, Bool) 0 == if{ 1 (&gt;K:FLIGHT_LEVEL_CHANGE_ON) } els{ 1 (&gt;K:FLIGHT_LEVEL_CHANGE_OFF) }</script>
+    </Script>
+    <Script>
+      <group>Scripts</group>
       <label>ALT_info</label>
       <script>(A:AUTOPILOT ALTITUDE LOCK, Bool) 0 == if{ 0 (&gt;MIDI:3:NoteOn:1:2) } els{ 1 (&gt;MIDI:3:NoteOn:1:2) }</script>
     </Script>
@@ -775,6 +818,11 @@
       <group>Scripts</group>
       <label>FD_info</label>
       <script>(A:AUTOPILOT FLIGHT DIRECTOR ACTIVE, Bool) 0 == if{ 0 (&gt;MIDI:3:NoteOn:1:0) } els{ 1 (&gt;MIDI:3:NoteOn:1:0) }</script>
+    </Script>
+    <Script>
+      <group>Scripts</group>
+      <label>FLC_info</label>
+      <script>(A:AUTOPILOT FLIGHT LEVEL CHANGE, Bool) 0 == if{ 0 (&gt;MIDI:3:NoteOn:1:10) } els{ 1 (&gt;MIDI:3:NoteOn:1:10) }</script>
     </Script>
     <Script>
       <group>Scripts</group>
